@@ -196,6 +196,7 @@ static void SHA256_Final(unsigned char *digest, SHA256_CTX *ctx)
 
 #include <wincrypt.h>
 
+/* !checksrc! disable TYPEDEFSTRUCT 1 */
 typedef struct {
   HCRYPTPROV hCryptProv;
   HCRYPTHASH hHash;
@@ -280,6 +281,7 @@ do {                                                          \
 } while(0)
 #endif
 
+/* !checksrc! disable TYPEDEFSTRUCT 1 */
 typedef struct sha256_state {
 #ifdef HAVE_LONGLONG
   unsigned long long length;
